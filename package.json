@@ -1,0 +1,21 @@
+{
+  "name": "drizzle-pg-mem-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JasoonS/drizzle-pg-mem-example.git",
+  "author": "Jason <Jason@wildcards.world>",
+  "license": "MIT",
+  "dependencies": {
+    "drizzle-orm": "^0.23.11",
+    "pg": "^8.10.0",
+    "pg-mem": "^2.6.12"
+  },
+  "scripts": {
+    "create-migration": "npx drizzle-kit generate:pg --out migrations-folder --schema src/schema.js ",
+    "start": "node src/db.js",
+    "start-mem": "USE_PG_MEM='true' node src/db.js"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.17.4"
+  }
+}
